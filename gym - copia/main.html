@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym User Registration</title>
+</head>
+<body>
+    <h1>Register User and Select Plan</h1>
+    <form action="process.php" method="POST">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="lastName">Last Name:</label><br>
+        <input type="text" id="lastName" name="lastName" required><br><br>
+
+        <label for="stature">Stature (in cm):</label><br>
+        <input type="number" id="stature" name="stature" step="0.1" required><br><br>
+
+        <label for="weight">Weight (in kg):</label><br>
+        <input type="number" id="weight" name="weight" step="0.1" required><br><br>
+
+        <h3>Select a Plan:</h3>
+        <label>
+            <input type="radio" name="plan" value="1" required> Basic: $20000 - General Access
+        </label><br>
+        <label>
+            <input type="radio" name="plan" value="2"> Medium: $40000 - General Access + Directed Classes
+        </label><br>
+        <label>
+            <input type="radio" name="plan" value="3"> Premium: $120000 - General Access + Directed Classes + Personal Trainer + Wet Zone
+        </label><br><br>
+
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>

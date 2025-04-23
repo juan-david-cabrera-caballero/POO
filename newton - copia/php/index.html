@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Newton's Law</title>
+</head>
+<body>
+    <h1>Select a Newton's Law</h1>
+    <form action="roster.php" method="POST">
+        <label for="law">Choose a law:</label><br><br>
+        <input type="radio" id="firstLaw" name="law" value="1" required>
+        <label for="firstLaw">First Law (Inertia)</label><br>
+        <input type="radio" id="secondLaw" name="law" value="2">
+        <label for="secondLaw">Second Law (F = m * a)</label><br>
+        <input type="radio" id="thirdLaw" name="law" value="3">
+        <label for="thirdLaw">Third Law (Action and Reaction)</label><br><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

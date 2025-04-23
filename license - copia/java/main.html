@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+</head>
+<body>
+    <h1>Student Registration</h1>
+    <form action="process.php" method="POST">
+        <label for="studentName">Name:</label><br>
+        <input type="text" id="studentName" name="studentName" required><br><br>
+
+        <label for="lastName">Last Name:</label><br>
+        <input type="text" id="lastName" name="lastName" required><br><br>
+
+        <label for="identification">Identification:</label><br>
+        <input type="text" id="identification" name="identification" required><br><br>
+
+        <label for="direction">Direction:</label><br>
+        <input type="text" id="direction" name="direction" required><br><br>
+
+        <label for="phone">Phone:</label><br>
+        <input type="text" id="phone" name="phone" required><br><br>
+
+        <label for="rh">RH:</label><br>
+        <input type="text" id="rh" name="rh" required><br><br>
+
+        <h3>Select a License:</h3>
+        <label>
+            <input type="radio" name="license" value="1" required> License A - $1,000,000 COP
+        </label><br>
+        <label>
+            <input type="radio" name="license" value="2"> License B - $1,500,000 COP
+        </label><br>
+        <label>
+            <input type="radio" name="license" value="3"> License C - $2,000,000 COP
+        </label><br><br>
+
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>

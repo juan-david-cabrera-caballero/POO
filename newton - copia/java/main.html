@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newton's Laws</title>
+    <script>
+        function toggleInputs() {
+            const secondLawInputs = document.getElementById("secondLawInputs");
+            const selectedLaw = document.querySelector('input[name="law"]:checked').value;
+
+            if (selectedLaw === "2") {
+                secondLawInputs.style.display = "block";
+            } else {
+                secondLawInputs.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Select a Newton's Law</h1>
+    <form action="process.php" method="POST">
+        <label>
+            <input type="radio" name="law" value="1" onclick="toggleInputs()" required>
+            First Law (Inertia)
+        </label><br>
+        <label>
+            <input type="radio" name="law" value="2" onclick="toggleInputs()">
+            Second Law (F = m * a)
+        </label><br>
+        <label>
+            <input type="radio" name="law" value="3" onclick="toggleInputs()">
+            Third Law (Action and Reaction)
+        </label><br><br>
+
+        <div id="secondLawInputs" style="display: none;">
+            <h3>Second Law Inputs</h3>
+            <label for="mass">Mass (kg):</label><br>
+            <input type="number" id="mass" name="mass" step="0.01"><br><br>
+            <label for="acceleration">Acceleration (m/s²):</label><br>
+            <input type="number" id="acceleration" name="acceleration" step="0.01"><br><br>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
